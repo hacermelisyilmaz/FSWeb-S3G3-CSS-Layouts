@@ -1,0 +1,9 @@
+@media (max-width: 800px) {
+  body {
+    background: #617651d0;
+  }
+
+  header nav a {
+    padding: 1% 0;
+  }
+}

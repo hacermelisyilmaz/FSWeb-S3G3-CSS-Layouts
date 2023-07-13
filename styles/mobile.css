@@ -1,0 +1,22 @@
+@media (max-width: 500px) {
+  body {
+    background: #111d0de1;
+    color: whitesmoke;
+  }
+
+  header h1 {
+    color: #c9dfc3;
+  }
+
+  header nav a {
+    background-color: #c9dfc3;
+  }
+
+  footer {
+    background-color: #c9dfc359;
+  }
+
+  footer button {
+    background-color: #c9dfc359;
+  }
+}

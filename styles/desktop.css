@@ -8,63 +8,37 @@ body {
   display: flex;
 }
 
+/**HEADER**/
+
+header {
+  flex-direction: column;
+  gap: 4vh;
+  margin-top: 5vh;
+}
+
 header h1 {
   color: #111d0de1;
   text-align: center;
   font-weight: 900;
   font-size: 30px;
-  margin: 5vh auto 0 auto;
   line-height: 1.5;
-}
-
-header #animation {
-  width: 10px;
-  height: 10px;
-  border: 1px solid transparent;
-  border-radius: 50%;
-  position: relative;
-  animation-name: comet;
-  animation-duration: 4s;
-}
-
-@keyframes comet {
-  0% {
-    background-color: #111d0de1;
-    left: 30%;
-    bottom: 0px;
-  }
-  25% {
-    background-color: #111d0dad;
-    left: 70%;
-    bottom: 0px;
-  }
-  50% {
-    background-color: #111d0d36;
-    left: 70%;
-    bottom: 60px;
-  }
-  75% {
-    background-color: #111d0dad;
-    left: 30%;
-    bottom: 60px;
-  }
-  100% {
-    background-color: #111d0de1;
-    left: 30%;
-    bottom: 0px;
-  }
 }
 
 header nav {
   justify-content: center;
-  margin-top: 5vh;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 header nav a {
   text-decoration: none;
   border: 2px solid #111d0de1;
-  padding: 0.5% 2%;
+  padding: 1vh 4vw;
   transition-duration: 0.4s;
+  flex-shrink: 1;
+  flex-basis: 100px;
+  text-align: center;
 }
 
 header nav a:hover {
@@ -74,38 +48,43 @@ header nav a:hover {
 
 header p {
   text-align: center;
-  margin: 2vh 5%;
   line-height: 1.5;
+  margin: 0 10vw;
 }
 
 header img {
   width: 100%;
-  height: 400px;
+  height: 40vh;
   object-fit: cover;
   margin-bottom: 2vh;
 }
 
+/**PROJECTS**/
+
 .projects {
-  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 
 .projects .p-child {
-  flex-shrink: 1;
+  margin: 1vh 0;
+  flex-grow: 1;
+  flex-basis: 160px;
 }
 
-.projects div {
-  margin: 1vh 0.5vw;
+.projects .p-child:last-child {
+  flex-grow: 1;
 }
 
 .projects div img {
-  max-width: 100%;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .projects #project-text {
   flex-direction: column;
   justify-content: space-around;
-  width: 20%;
 }
 
 .projects #project-text div {
@@ -121,9 +100,7 @@ header img {
   font-size: 12px;
 }
 
-.projects #project-text div p {
-  margin: 3% 0;
-}
+/**FOOTER**/
 
 footer {
   background: #617651;
@@ -151,10 +128,7 @@ footer button:hover {
 
 footer nav {
   justify-content: center;
-}
-
-footer nav a {
-  margin: 0 1%;
+  gap: 2%;
 }
 
 footer nav a img {
